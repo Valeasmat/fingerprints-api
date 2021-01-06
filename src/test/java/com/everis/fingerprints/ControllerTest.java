@@ -15,7 +15,7 @@ public class ControllerTest {
     private FingerprintController fingerprintController=new FingerprintController();
 
     @Test
-    public void ControllerTest(){
+    public void controllerTest(){
         ATMDepositRequest request=new ATMDepositRequest();
         request.setDocumentNumber("10000000");
 
