@@ -2,8 +2,8 @@ package com.everis.fingerprints;
 
 
 import com.everis.fingerprints.controller.FingerprintController;
-import com.everis.fingerprints.dao.ATMDepositRequest;
-import com.everis.fingerprints.dao.FingerprintResponse;
+import com.everis.fingerprints.dto.ATMDepositRequest;
+import com.everis.fingerprints.dto.FingerprintResponse;
 import io.reactivex.observers.TestObserver;
 import lombok.extern.slf4j.Slf4j;
 import org.junit.jupiter.api.Test;

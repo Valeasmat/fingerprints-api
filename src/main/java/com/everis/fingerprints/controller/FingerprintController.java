@@ -1,8 +1,8 @@
 package com.everis.fingerprints.controller;
 
 
-import com.everis.fingerprints.dao.ATMDepositRequest;
-import com.everis.fingerprints.dao.FingerprintResponse;
+import com.everis.fingerprints.dto.ATMDepositRequest;
+import com.everis.fingerprints.dto.FingerprintResponse;
 import io.reactivex.Single;
 import org.springframework.http.MediaType;
 import org.springframework.web.bind.annotation.PostMapping;

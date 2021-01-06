@@ -1,4 +1,4 @@
-package com.everis.fingerprints.dao;
+package com.everis.fingerprints.dto;
 
 import lombok.*;
 
