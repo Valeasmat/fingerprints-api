@@ -1,0 +1,42 @@
+##Deploy
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: fingerprints-api
+  labels:
+    app: fingerprints-api
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: fingerprints-api
+  template:
+    metadata:
+      labels:
+        app: fingerprints-api
+    spec:
+      containers:
+        - name: fingerprints-api
+          image: acrvmam03.azurecr.io/fingerprints-api
+          resources:
+            requests:
+              memory: "256Mi"
+              cpu: "250m"
+            limits:
+              memory: "512Mi"
+              cpu: "500m"
+      imagePullSecrets:
+        - name: regcred
+---
+##Service
+kind: Service
+apiVersion: v1
+metadata:
+  name: fingerprints-api
+spec:
+  selector:
+    app: fingerprints-api
+  ports:
+    - port: 8821
+      targetPort: 8821
+  type: LoadBalancer
