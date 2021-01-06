@@ -17,7 +17,7 @@ public class FingerprintController {
             response = FingerprintResponse.class,
             produces = "application/stream+json")
     @ApiResponse(code = 200,message = "Successful operation",response = FingerprintResponse.class)
-    @PostMapping(value = "/core/fingerprints/validate",produces = MediaType.APPLICATION_STREAM_JSON_VALUE)
+    @PostMapping(value = "/core/fingerprints/validate",produces = MediaType.APPLICATION_JSON_VALUE)
     public Single<FingerprintResponse> validate(@RequestBody ATMDepositRequest request){
         return Single.just(new FingerprintResponse("Core",true));
     }
